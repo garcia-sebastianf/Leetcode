@@ -1,6 +1,6 @@
 //Created by: Sebastián Felipe García Rojas
 
-/**/
+/*Explica*/
 
 public class Solution {
     public int CountConsistentStrings(string allowed, string[] words) {
@@ -14,6 +14,7 @@ public class Solution {
                 foreach (char letterStringAllowed in allowed){
                     if (letterStringAllowed == letterWord){
                         LetterIsConsisted = true;
+                        break;
                     }
                 }
                 if (LetterIsConsisted == false){       
