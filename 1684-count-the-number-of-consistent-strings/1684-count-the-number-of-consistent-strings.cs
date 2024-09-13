@@ -28,7 +28,6 @@ public class Solution {
                     WordIsConsisted = false;
                     break;
                 }
-                
             }
             
             // Increment the count if the word is consistent
@@ -36,7 +35,6 @@ public class Solution {
                 consistedWords++;
                 LetterIsConsisted = false;
             }
-            
         }
         return consistedWords;      
     }
