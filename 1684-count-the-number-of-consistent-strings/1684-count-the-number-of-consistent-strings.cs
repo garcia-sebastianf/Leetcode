@@ -14,10 +14,10 @@ public class Solution {
             foreach (char letterWord in word){
                 LetterIsConsisted = false;
                 
-                foreach (char letterStringAllowed in allowed){
+                foreach (char letterAllowed in allowed){
                     
                     // Find one match between the letters of the string 'allowed' and the current letter in the word
-                    if (letterStringAllowed == letterWord){
+                    if (letterAllowed == letterWord){
                         LetterIsConsisted = true;
                         break;
                     }
