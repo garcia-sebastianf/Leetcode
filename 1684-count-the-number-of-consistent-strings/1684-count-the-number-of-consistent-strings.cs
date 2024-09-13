@@ -1,8 +1,5 @@
 //Created by: Sebastián Felipe García Rojas
 
-/*Explica
-
-asdffffffffffffffffffffffffffffffffffffffffffffffffffff*/
 
 public class Solution {
     public int CountConsistentStrings(string allowed, string[] words) {
@@ -12,24 +9,34 @@ public class Solution {
         int consistedWords = 0;
             
         foreach (string word in words){
+            WordIsConsisted = true; 
+            
             foreach (char letterWord in word){
+                LetterIsConsisted = false;
+                
                 foreach (char letterStringAllowed in allowed){
+                    
+                    // Find one match between the letters of the string 'allowed' and the current letter in the word
                     if (letterStringAllowed == letterWord){
                         LetterIsConsisted = true;
                         break;
                     }
                 }
+                
+                // If there is no match for the word's letter, then the word is inconsistent
                 if (LetterIsConsisted == false){       
                     WordIsConsisted = false;
                     break;
                 }
-                LetterIsConsisted = false;
+                
             }
+            
+            // Increment the count if the word is consistent
             if (WordIsConsisted == true){
                 consistedWords++;
                 LetterIsConsisted = false;
             }
-            WordIsConsisted = true; 
+            
         }
         return consistedWords;      
     }
