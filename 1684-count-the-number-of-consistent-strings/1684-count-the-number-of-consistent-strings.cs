@@ -1,6 +1,8 @@
 //Created by: Sebastián Felipe García Rojas
 
-/*Explica*/
+/*Explica
+
+asdffffffffffffffffffffffffffffffffffffffffffffffffffff*/
 
 public class Solution {
     public int CountConsistentStrings(string allowed, string[] words) {
