@@ -20,12 +20,9 @@ public class Solution {
                     i++;
                     continue;       
             }
-        
-        
-                
+
             for (int k = init; k <= finish; k++){
-                
-                
+            
                 if (k < finish){
                     if (once == false){
                         xoroperation = arr[k] ^ arr[k+1];
@@ -33,16 +30,13 @@ public class Solution {
                         continue;
                     }
                     
-                    xoroperation = xoroperation ^ arr[k+1];
-                    
+                    xoroperation = xoroperation ^ arr[k+1]; 
                 } 
             }
             
             output[i] = xoroperation;
             i++;
-            
         }
-        
         
         return output;
     }
