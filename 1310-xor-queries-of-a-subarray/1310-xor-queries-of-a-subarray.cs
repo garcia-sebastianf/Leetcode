@@ -16,28 +16,31 @@ public class Solution {
             once = false;
             
             if (init == finish) {
-                    xoroperation = arr[init];
-            }else{
+                    output[i] = arr[init];
+                    i++;
+                    continue;       
+            }
                 
-                for (int k = init; k <= finish; k++){
+            for (int k = init; k <= finish; k++){
                 
                 
-                    if (k < finish){
-                        if (once == false){
-                            xoroperation = arr[k] ^ arr[k+1];
-                            once = true;
-                            continue;
-                        }
+                if (k < finish){
+                    if (once == false){
+                        xoroperation = arr[k] ^ arr[k+1];
+                        once = true;
+                        continue;
+                    }
                     
-                        xoroperation = xoroperation ^ arr[k+1];
+                    xoroperation = xoroperation ^ arr[k+1];
                     
-                    } 
-                }
+                } 
             }
             
             output[i] = xoroperation;
             i++;
+            
         }
+        
         
         return output;
     }
