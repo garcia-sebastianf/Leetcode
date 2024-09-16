@@ -3,7 +3,7 @@
 class Solution:
     def findMinDifference(self, timePoints: List[str]) -> int:
 
-        lenArray = len(timePoints)
+
         minFormat = []
         i = 0
         minimumTimeDif = 24*60
@@ -15,15 +15,14 @@ class Solution:
             if timePoint == "00:00":
                 minFormat.append(1440)
             else:
-                minutos = int(timePoint[0:2])*60 + int(timePoint[3:5])
-                minFormat.append(minutos)
+                minFormat.append(int(timePoint[0:2])*60 + int(timePoint[3:5]))
 
             #print(minutos)
 
         #Ordered the array in ascending order
         minFormat.sort()
 
-        while i < lenArray:
+        while i < len(timePoints):
             #                a.m       p.m       a.m (+1440)
             #Explanation |---------|---------|---------|
             #                     719       
@@ -36,12 +35,9 @@ class Solution:
 
         #for minuto in minFormat:
         #    print(minuto)
-        
-        listLen = len(minFormat)
-        print(listLen)
-
+    
         i = 0
-        while i < (listLen-1):
+        while i < (len(minFormat)-1):
             if minFormat[i] == minFormat[i + 1]:
                 return 0
                 # Handle the exception for the time period between 23:59 and 00:00
